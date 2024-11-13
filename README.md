@@ -1,15 +1,12 @@
 
 # WattEco
 
- ---
  ## Integrantes:
  Ana Clara Rocha de Oliveira<br>
  Thiemi Hiratani Favaro<br>
  Stephany Siqueira<br>
  Camila dos Santos Cunha<br>
  Guilherme Castro<br>
-
- ---
 
 **WattEco** é um aplicativo educativo e interativo projetado para incentivar o consumo consciente de energia. Utilizando missões gamificadas, o app ensina os usuários a adotar práticas sustentáveis, reduzindo o consumo de energia, promovendo o uso de fontes renováveis e contribuindo para um futuro mais verde.
 
@@ -30,6 +27,8 @@ Para simular um sistema de monitoramento de energia, utilizamos o [Wokwi](https:
 - **Sensor LDR (Light Dependent Resistor)**: Para medir a intensidade luminosa.
 - **Sensor ACS712**: Simulação de um sensor de corrente para monitorar o consumo de energia.
 
+![](images\placa.png)
+
 Os dados desses sensores são processados pelo ESP32 e enviados via **MQTT** para um dashboard, utilizando o **Node-RED** para exibição em tempo real.
 
 ### Exibição de Dados
@@ -42,6 +41,12 @@ O **Node-RED** é utilizado para criar um dashboard que exibe as leituras dos se
 - Consumo de energia 
 
 Os dados são transmitidos em formato **JSON**, usando a biblioteca **ArduinoJson** para a formatação e estruturação das informações.
+
+![](images\nodered.png)
+![](images\dashboard4.png)
+![](images\dashboard3.png)
+![](images\dashboard2.png)
+![](images\dashboard1.png)
 
 ### Arquitetura da Solução
 
