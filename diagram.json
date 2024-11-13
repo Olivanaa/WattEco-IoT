@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "author": "Ana Clara",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -192, "left": -215.96, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -249.3, "left": -370.2, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -68.5, "left": -57.8, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot2", "top": -20.5, "left": -307.4, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot3", "top": -20.5, "left": -393.8, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -91.2,
+      "left": 37.85,
+      "rotate": 90,
+      "attrs": { "value": "180000" }
+    },
+    { "type": "wokwi-photoresistor-sensor", "id": "ldr1", "top": 108.8, "left": -76, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot4", "top": 94.7, "left": -192.2, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "dht1:VCC", "esp:VN", "red", [ "v9.6", "h134.4", "v-9.6" ] ],
+    [ "dht1:SDA", "esp:25", "green", [ "v0" ] ],
+    [ "dht1:GND", "esp:GND.1", "black", [ "v0" ] ],
+    [ "pot3:GND", "esp:GND.1", "black", [ "v19.2", "h57.6", "v-105.6" ] ],
+    [ "pot2:GND", "esp:GND.1", "black", [ "v19.2", "h-28.8", "v-105.6" ] ],
+    [ "esp:GND.3", "pot1:GND", "black", [ "h48", "v153.6", "h38.4" ] ],
+    [ "esp:32", "pot1:SIG", "green", [ "h-19.05", "v-115.2", "h144", "v240", "h67.2" ] ],
+    [ "r1:1", "esp:3V3", "red", [ "h0", "v-96", "h-278.4" ] ],
+    [ "r1:2", "pot1:VCC", "red", [ "h0", "v85.2", "h-76.8" ] ],
+    [ "ldr1:VCC", "esp:5V", "red", [ "h19.2", "v-48", "h-230.4" ] ],
+    [ "ldr1:GND", "esp:GND.3", "black", [ "h144", "v-250", "h-211.2", "v28.8" ] ],
+    [ "pot3:VCC", "esp:3V3", "red", [ "v28.8", "h-87.2", "v-345.6", "h230.4" ] ],
+    [ "pot2:VCC", "esp:3V3", "red", [ "v38.4", "h-202.4", "v-355.2", "h249.6" ] ],
+    [ "esp:34", "pot3:SIG", "green", [ "h-105.45", "v182.4", "h-38.4" ] ],
+    [ "esp:35", "pot2:SIG", "green", [ "h-19.05", "v172.8", "h-38.4" ] ],
+    [ "pot4:GND", "esp:GND.1", "black", [ "v0", "h-57.6", "v-201.6" ] ],
+    [
+      "pot4:VCC",
+      "esp:3V3",
+      "red",
+      [ "v9.6", "h-221.6", "v-86.4", "h-96", "v-336", "h0", "v-19.2", "h240" ]
+    ],
+    [ "pot4:SIG", "esp:33", "green", [ "v19.2", "h47.6", "v-153.6", "h-115.2", "v-124.8" ] ],
+    [ "ldr1:AO", "esp:27", "green", [ "h9.6", "v28.1", "h-211.2", "v-153.6", "h-115.2", "v-96" ] ]
+  ],
+  "dependencies": {}
+}
