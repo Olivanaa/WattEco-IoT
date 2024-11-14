@@ -29,7 +29,7 @@ Para simular um sistema de monitoramento de energia, utilizamos o [Wokwi](https:
 - **Sensor LDR (Light Dependent Resistor)**: Para medir a intensidade luminosa.
 - **Sensor ACS712**: Simulação de um sensor de corrente para monitorar o consumo de energia.
 
-![esp32](images\placa.png)
+![esp32](placa.png)
 
 Os dados desses sensores são processados pelo ESP32 e enviados via **MQTT** para um dashboard, utilizando o **Node-RED** para exibição em tempo real.
 
@@ -44,11 +44,11 @@ O **Node-RED** é utilizado para criar um dashboard que exibe as leituras dos se
 
 Os dados são transmitidos em formato **JSON**, usando a biblioteca **ArduinoJson** para a formatação e estruturação das informações.
 
-![node-red](images\nodered.png)
-![dashboard](images\dashboard4.png)
-![dashboard](images\dashboard3.png)
-![dashboard](images\dashboard2.png)
-![dashboard](images\dashboard1.png)
+![node-red](nodered.png)
+![dashboard](dashboard4.png)
+![dashboard](dashboard3.png)
+![dashboard](dashboard2.png)
+![dashboard](dashboard1.png)
 
 ### Arquitetura da Solução
 
