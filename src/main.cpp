@@ -31,7 +31,7 @@ const char* SensorID = "ACGST";
 const char* SSID = "Wokwi-GUEST";
 const char* PASSWORD = ""; 
 
-// MQTT
+//MQTT
 const char* BROKER_MQTT = "74.179.84.66"; //URL do broker MQTT que se deseja utilizar
 int BROKER_PORT = 1883; // Porta do Broker MQTT
 const char* mqttServer = "74.179.84.66";
@@ -40,6 +40,11 @@ const char* mqttUser = "gs2024"; // Usuário do Broker
 const char* mqttPassword = "q1w2e3r4"; // Senha do Broker
 #define TOPICO_SUBSCRIBE "ACGST"     //tópico MQTT de escuta
 #define TOPICO_PUBLISH   "ACGST"    //tópico MQTT de envio de informações para Broker
+
+// const char *BROKER_MQTT = "broker.hivemq.com";
+// const int BROKER_PORT = 1883;
+// #define TOPICO_SUBSCRIBE "ACGST"     
+// #define TOPICO_PUBLISH   "ACGST"   
 
 // Variáveis de data e hora 
 #define NTP_SERVER "pool.ntp.org"   
@@ -100,6 +105,20 @@ void initMQTT() {
         }
     }
 }
+
+// void initMQTT() {
+//     MQTT.setServer(BROKER_MQTT, BROKER_PORT);
+//     while (!MQTT.connected()) {
+//         Serial.println("Conectando ao Broker MQTT...");
+//         if (MQTT.connect(SensorID)) {
+//             Serial.println("Conectado ao MQTT!");
+//         } else {
+//             Serial.print("Falha ao conectar, estado: ");
+//             Serial.println(MQTT.state());
+//             delay(2000);  
+//         }
+//     }
+// }
 
 
 //Função: inicializa e conecta-se na rede WiFi desejada

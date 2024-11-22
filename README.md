@@ -42,9 +42,10 @@ O **Node-RED** é utilizado para criar um dashboard que exibe as leituras dos se
 - Luminosidade (convertida de resistência para lux)
 - Consumo de energia 
 
-Os dados são transmitidos em formato **JSON**, usando a biblioteca **ArduinoJson** para a formatação e estruturação das informações.
+Os dados são transmitidos em formato **JSON**, usando a biblioteca **ArduinoJson** para a formatação e estruturação das informações. <br>
+Além disso, o Node-RED também realiza uma requisição HTTP com os dados capturados. Esses dados podem ser acessados e consumidos por uma API, permitindo que outras aplicações ou dashboards em tempo real utilizem essas informações para análises ou monitoramento adicional.
 
-![node-red](nodered.png)
+![node-red](nodered1.png)
 ![dashboard](dashboard4.png)
 ![dashboard](dashboard3.png)
 ![dashboard](dashboard2.png)
@@ -54,7 +55,7 @@ Os dados são transmitidos em formato **JSON**, usando a biblioteca **ArduinoJso
 
 - **ESP32**: Microcontrolador responsável por coletar e processar os dados dos sensores.
 - **MQTT Broker**: Facilita a comunicação entre o ESP32 e o dashboard.
-- **Node-RED**: Utilizado para visualizar os dados e configurar a interface de monitoramento em tempo real.
+- **Node-RED**: Utilizado para visualizar os dados e configurar a interface de monitoramento em tempo real e realizar a requisição HTTP.
 
 ### Funcionalidades
 
